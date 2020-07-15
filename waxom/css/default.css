@@ -1,0 +1,449 @@
+@import url(common.css);
+
+.slider-list li{
+  background-repeat: no-repeat;
+  /* 부모가 만들어준 높이안에 다써라 */
+  /* background-size:size; */
+  background-size:cover;
+  /* height: 1024px; */
+  height: 100vh;
+  text-align: center;
+  /* 너비 줄여도 그대로 적용되게 너비를 100%준다 */
+  width: 100%;
+  /* background-position: center top; */
+
+}
+
+.slider-list li.slide1{background-image: url(../images/mainslide_01.jpg)}
+.slider-list li.slide2{background-image: url(../images/mainslide_02.jpg)}
+.slider-list li.slide3{background-image: url(../images/mainslide_03.jpg)}
+
+
+
+.slider-list li .contents{
+  position: absolute;
+  /* 정중앙에 놓기, width를 주면 매번 width 크기가 다를때마다 변경해줄수가 없다 */
+  left: 50%; top:50%; transform: translate(-50%,-50%);
+  z-index: 110;
+  color: #fff;
+  width: 590px;
+  animation: slideIN 1s forwards;
+}
+
+@keyframes slideIn {
+  0%{transform: translateY(40%); opacity: 0;}
+  100%{transform: translateY(0); opacity: 1;}
+}
+.slider-list li.cycle-slide-active .contents *{animation: slideIn 0.5s forwards ease-out;
+                            transform: translateY(40%);}
+
+/* .slider-list li:hover .contents *{animation: slideIn 0.5s forwards ease-out;} */
+
+.slider-list li .contents h3{font-size: 36px; font-family: "Raleway", sans-serif; font-weight: 500; line-height: 1.1;
+                             animation-delay:1s; }
+.slider-list li .contents h2{font-size: 52px; font-family: "Raleway", sans-serif; font-weight: 800; line-height: 1.5;
+                            animation-delay: 1.4s;}
+.slider-list li .contents p{width: 98%; margin-bottom: 49px;
+                            animation-delay: 1.8s;}
+.slider-list li .contents a{animation-delay: 2s;}
+
+
+
+header{
+  position: absolute;
+  /* cycle을 가져오면 z-index값이 있어서 따로 z-index값을 줘야한다 */
+  z-index: 999;
+  /* 너비 다써라 */
+  width: 100%;
+  padding: 40px 0;
+}
+header .logo{float: left;}
+header nav{float: right;}
+header nav ul{float: left;}
+header nav ul li{float: left;}
+header nav ul li a{line-height: 56px ; font-size:14px ; color:#fff; text-decoration: none;}
+.main-menu li{margin-right: 29px;}
+.main-menu li:last-child{margin-right: 60px;}
+.top-icons li{margin-right: 25px;}
+.top-icons li:last-child{margin-right: 0;}
+header .logo a{
+  width:171px ;
+  height: 56px;
+  background :url(../images/logo-white.png) no-repeat;
+  display: block;
+  text-indent: -9999em;
+}
+
+header nav ul li a:hover, header nav ul li a.active{
+  color:#c7b299;
+}
+
+/* 화살표 */
+/* 화살표 */
+.slider .control a{
+  width: 40px;
+  height: 74px;
+  background: url(../images/sprites.png) no-repeat;
+  text-indent: -9999em;
+  /* display: inline-block; */
+  /* postion을 줄거기 떄문에 블락 해줄필요없다 */
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  z-index: 120;
+}
+                        /* 불러운 이미지 spirtes에 여러 이미지중 골라 쓰기위해  왼쪽상단을 기준으로 x축 y축 값을 포토샵으로 알아내서 가져온다 */
+                        /* 위로 올라가니깐 -y축 */
+.slider .control .prev{background-position:0 -77px; margin-left: -789px;}
+                        /* 위로 올라가고, 왼쪽으로 */
+.slider .control .next{background-position:-40px -77px; margin-left:789px; }
+
+/* 페이저 */
+/* 페이져 */
+.slider .pager {
+  position: absolute;
+  left: 50%; ; transform: translateX(-50%); bottom: 40px;
+  z-index: 130;
+}
+                      /* 포토샵에서 동그라미 크기, 보더(는 stroke) opacity는 레이어 메뉴에 써있음)크기확인 */
+.slider .pager span{ width: 11px; height: 11px;
+  background: rgba(255,255,255,0.5);
+  float: left; margin-right: 10px;
+  border-radius: 50%; text-indent: -9999em;
+  border: 2px solid transparent;
+  /* 백그라운드 기본값은 보더까지인데 여기선 보더 따로 살려주기위해 백그라운드 범위를 컨탠트까지만 줘서 위에 백그라운드 값이 컨탠트까지만 나오게 한다 */
+  background-clip: content-box;
+
+}
+.slider .pager span.cycle-pager-active{
+  border-color: #d3c1ad;
+  background: none;
+}
+
+/* content */
+/* content */
+/* content */
+
+.services{ padding: 94px 0 80px;}
+.service_item{width: 270px; margin-right: 30px; text-align: center; float: left;}
+.service_item:last-child{ margin-right: 0;}
+.icon{ font-size: 36px; color: #555555;}
+                              /* 포토샵 T에서 semiboldsms 500 */
+.service_item h4{ font-size: 22px; font-weight: 500; color: #555555; margin:26px 0 13px;}
+.service_item p{font-size: 14px; font-weight: 300; color:#8c8c8c; margin-bottom: 22px;}
+.service_item .status{width: 70px; height:3px ; background:#f1eee9; ;
+  /* margin:0 auto; */
+  display: inline-block;}
+.service_item:hover h4{ color: #c7b299;}
+.service_item:hover .status{background:#c7b299; }
+
+
+/* Realization */
+/* Realization */
+/* Realization */
+
+.realization{
+  background: #fbfaf8; padding-top: 84px; text-align: center;}
+.realization img{width: 100%;}
+
+/* <!-- text_boxes --> */
+/* <!-- text_boxes --> */
+/* <!-- text_boxes --> */
+.text_boxes{
+  padding: 50px;
+  background: linear-gradient(to right,#211b19,#4e3427)
+}
+.text_boxes .box_contents{float: left; left: 371px;}
+.text_boxes .btn{float: right;}
+
+.text_boxes .box_contents h4{
+ color: #fff; font-size: 28px;
+ margin-bottom: 5px;
+}
+.text_boxes .box_contents h4 span{
+  color: #c7b299;
+}
+.text_boxes .box_contents p {color: #615855; font-size:18px; font-weight: 300;}
+
+ /* latest_projects  */
+ /* latest_projects  */
+ /* latest_projects  */
+
+ .latest_projects input{
+   display: none;
+ }
+ .latest_projects{
+   text-align: center;
+   padding-top: 78px;
+ }
+ .projects_wrap{ text-align: center;}
+ .projects_wrap label{line-height: 30px;
+ border: 1px solid #ebebeb; padding: 0 18px; background: #fff; display: inline-block;
+border-radius: 3px; margin: 0 3px; font-size: 14px; font-weight: 300; color: #8c8c8c;
+transition: 0.3s;}
+.projects_wrap input:checked + label {
+  background:#998675; color: #fff;
+  border: 1px solid #998675;
+}
+
+
+.project_list{margin-top: 40px;}
+
+
+.project_list li{ float:left;  width: 370px; margin: 0 30px 30px 0;}
+/* 이대로 전부 오른쪽에 마진을 주면 세번째가 안 올라오니깐 3번쨰마다 오른쪽 마진은 0으로 */
+.project_list li:nth-child(3n) {margin: 0 0 30px 0}
+.project_list li img{width: 100%; }
+
+
+.project_list li .content{background: #fbfaf8; padding: 24px 29px;}
+.project_list li .content h4{font-size: 20px; color: #c7b299; font-weight: 500;}
+.project_list li .content p{font-size: 14px; color: #d1d1d1;}
+
+.project_list li .imgWrap{position: relative;}
+.project_list li .hover_contents{
+  position: absolute; background: rgba(0,0,0,.7);
+left: 0; right: 0; bottom: 0; top: 0; text-align: center;
+ padding-top: 116px; opacity: 0;transition: 0.5s
+}
+.project_list li .hover_contents a {
+  color: #fff; margin: 0 15px; font-size: 26px;
+}
+.project_list li .hover_contents a:hover {color: #c7b299;}
+.project_list li:hover .hover_contents{opacity: 1;}
+
+.project_list li:hover .content {background:  #362f2d;}
+.project_list li:hover .content h4{color: #fff;}
+.project_list li:hover .content p{color: #c7b299;}
+
+/* latest_projects +slide change */
+                  /* ~중에서  li 중에서 web말고 나머지는 사라지게*/
+#filter_web:checked ~ .project_list li:not(.web){animation: fadeOut 0.3s forwards;}
+/* #filter_web:checked ~ .project_list li:not(.web){display: none;} */
+#filter_mobile:checked ~ .project_list li:not(.mobile){animation: fadeOut 0.3s forwards;}
+#filter_illustration:checked ~ .project_list li:not(.illust){animation: fadeOut 0.3s forwards;}
+#filter_phto:checked ~ .project_list li:not(.photo){animation: fadeOut 0.3s forwards;}
+#filter_all:checked ~ .project_list li{animation: fadeIn 0.3s forwards;}
+@keyframes fadeIn {
+  from{opacity: 0; transform: scale(0);}
+    to{opacity: 1;  transform: scale(1);}
+
+}
+
+@keyframes fadeOut {
+  from{opacity: 1;  transform: scale(1);}
+    to{opacity: 0; transform: scale(0);}
+}
+
+.load_more{margin: 39px 0 76px;}
+
+/* latest_projects */
+/* latest_projects */
+/* latest_projects */
+
+
+/* video */
+/* video */
+/* JS를 안쓰는 상태에서는 클릭시 영상 자동재생은 실행시킬수 없다, 화면 검게처리하고 영상 띄우는것까지 가능 */
+/* 전체를 기준으로 컨텐츠가 사이즈가 변해도 가운데 있으려면 포지션 앱솔루트 */
+/* .video>.contents>.icon,.content_tt,.content_desc */
+
+.video{background: url(../images/video_bg.jpg) no-repeat center center/cover; height: 750px;
+        position: relative;}
+.video .contents {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+        text-align: center; }
+.video .contents *{color:#fff }
+.video .contents .icon {font-size:4em; width: 100px; height: 100px; background: rgba(0,0,0,.2); text-align: center;
+                        line-height: 100px; border-radius: 50%; display: inline-block; margin-bottom: 45px;}
+.video .contents .h3 { margin-top: 45px;}
+.video .contents span {color: #c7b299;}
+
+/* CSS로 동영상 퍼오기 */
+#overlay{ position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,.8);
+          opacity: 0; transition: 0.5s; pointer-events: none;}
+#overlay .inner{ position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+#overlay .close{ position: absolute; width: 2rem; height: 2rem; background: #fff; color: #000; border-radius: 50%; top: -1rem; right: -1rem;
+                  text-align: center; text-decoration: none; }
+#overlay:target { opacity: 1; pointer-events: auto;}
+
+ /* excellent_mobile */
+ /* excellent_mobile */
+
+.excellent_mobile {margin-top: 79px;}
+  /* 배경색이 있어서 마진으로 줄수없다 */
+/* .excellent_mobile {margin-top: 80px; background: #fbfaf8;} */
+.excellent_mobile {padding:top: 80px; background: #fbfaf8;}
+.excellent_mobile img{float: left; margin-left: 50px;}
+.excellent_mobile .contents{float: right; width: 670px; margin-top: 115px;}
+.excellent_mobile .contents h3, .excellent_mobile .contents p{
+                            text-align: left; width: 100%;}
+.excellent_mobile .contents ul li span{ width: 21px; height: 21px; background: url(../images/sprites.png) no-repeat -402px -89px;
+                                  /* span요소라 디스플레이줘야함 */
+                                 display: inline-block; text-indent: -9999em; margin-right: 28px;}
+.excellent_mobile .contents ul li {font-size: 16px; color: #8c8c8c; font-weight: 300; margin-bottom: 7px; vertical-align: middle;}
+.excellent_mobile .contents ul {margin-left: 50px;}
+
+/* counters */
+/* counters */
+/* counters */
+.counters{  background: linear-gradient(to right,#211b19,#4e3427);
+            padding:69px 0 60px; text-align: center;
+            }
+.counters ul {display: inline-block;}
+.counters ul li { width: 170px; float: left; margin:0 15px;}
+.counters ul li .icon{ background: url(../images/sprites.png) no-repeat; height: 44px; display: inline-block; text-indent: -9999em;width: 44px;}
+.counters ul li .coffee {width: 48px; background-position: -196px 0;}
+.counters ul li .posts  {background-position: -399px 0;}
+.counters ul li .likes  {background-position: -599px 0;}
+.counters ul li .launched {width: 54px; background-position: 100% 0;}
+
+.counters ul li h3 {font-size: 48px; margin: 30px 0 20px; color: #fff;}
+.counters ul li h4 {font-size: 14px; margin-bottom: 30px; color: #c7b299; font-family: "Montserrat" , sans-serif; text-transform: uppercase;}
+.counters ul li .bar {width: 30px; height: 2px;; background:#fff ; display: inline-block;}
+
+
+
+ /* recent_posts  */
+ /* recent_posts  */
+ /* recent_posts  */
+.recent_posts{
+   padding: 80px 0;
+}
+.posts_list li{
+  /* width: 370px; */
+}
+.recent_img_wrap{
+  /* position: relative; */
+}
+.recent_img_wrap .post_date {position: absolute; left: 20px; top: 20px; width: 50px; border-radius: 3px; color: #fff; text-align: center;  overflow: hidden; z-index: 2;}
+.recent_img_wrap .post_date .date{background: #363636; display: block; line-height: 35px; font-size: 24px; font-weight: 300;}
+.recent_img_wrap .post_date .month{background: #252525; line-height: 25px; font-size: 12px; font-weight: 300; display: block;}
+.recent_img_wrap .hover_contents {position: absolute; left: 0; right: 0; top: 0; bottom: 0;background: rgba(17,17,17,.7); opacity: 0; transition: 0.5s;}
+.recent_img_wrap .hover_contents span{position: absolute; left: 50%; top: 50%; transform:translate(-50%, -50%); font-size:48px ; color: #fff;}
+.posts_list li:hover .hover_contents{opacity: 1;}
+
+/* .post_details { width: 341px; height: 178px; padding-left: 27px; border: 1px solid; overflow: hidden;}
+.post_details h4{margin-top: 25px; font-size: 20px; color: #555555; line-height: 25px;}
+.post_details p{margin-top: 14px; font-size: 14px; color: #8c8c8c; line-height: 17px;}
+.post_details a{margin-top: 25px; font-size: 14px; color: #c7b299; line-height: 15px;} */
+.post_details { border-color: #f8f8f8; border-style: solid; border-width: 0 1px 1px 1px; padding: 25px 30px; background: #fff; transition: 0.4s;}
+.post_details h4{font-size: 20px; font-weight: 500; color: #555;}
+.post_details p{font-size: 14px; font-weight: 300;color: #8c8c8c; line-height: 22px; margin:15px 0;}
+.post_details a{font-size: 14px; color: #c7b299;}
+.post_details a span{ display: inline-block; margin-left: 5px;}
+
+.posts_list li:hover .post_details   {background: #362f3d; border-color: transparent;}
+.posts_list li:hover .post_details h4{color: #c7b299;}
+.posts_list li:hover .post_details p{color: #fff;}
+.posts_list li:hover .post_details a{color: #c7b299;}
+.posts_list li:hover  .post_date .date{background: #c7b299;}
+.posts_list li:hover  .post_date .month{background: #a48d72;}
+
+/* bx slider */
+/* bx slider */
+.controls {text-align: center; margin-top: 50px;}
+.controls a{ width: 22px; height: 22px; display: inline-block; background: url(../images/sprites.png) no-repeat;
+  text-indent: -9999em;}
+.controls a.bx-prev{background-position: -194px -89px;}
+.controls a.bx-next{background-position: -224px -89px;}
+.controls a.bx-prev:hover{background-position: -194px -111px;}
+.controls a.bx-next:hover{background-position: -224px -111px;}
+
+/* partners */
+/* partners */
+/* partners */
+.partners {height: 489px;background: url(../images/partners_bg.jpg) no-repeat center center; padding-top: 142px; box-sizing: border-box;}
+                                                                                  /* 제일 큰 이미지 하이트에 맞춤 */
+.partners ul li{width: 270px; margin-right:15px; text-align: center; float: left;  line-height: 210px;}
+.partners ul li:last-child{margin-right: 0;}
+/* 이미지 스타일로 센터에 놓기위한방법. a가 크기를 다 쓰게 해야한다.**flex를 쓰면 이런 문제 없이 간단히 해결*/
+.partners ul li a{display: block;}
+.partners ul li a img{vertical-align: middle;}
+
+
+/* Footer */
+/* Footer */
+/* Footer */
+footer p {color: #555555; font-size: 14px;}
+.footer_top{ background: #191919; padding: 80px 0 ;}
+.footer_top .container{}
+.col-one-forth{ width: 270px;margin-right: 30px; float: left;}
+.col-one-forth:last-child{ margin-right: 0; }
+                 /* 이미지 파일에서 크기확인 */
+.footer_logo a{ width: 181px; height:56px; ; background: url(../images/footer_logo.png) no-repeat; text-indent: -9999em; display: block;
+                margin-bottom: 24px;}
+
+.col-one-forth:first-child p {line-height: 24px; margin-bottom: 20px;}
+.footer_top:first-child a{ color:#d1d1d1; font-size:14px; text-decoration: none;}
+.footer_top:first-child a span{margin-left: 6px;}
+.footer_top h3{
+  font-size: 24px; font-weight: bold; line-height: 40px;  color: #fff;}
+                                                                           /* 라인하이트가 온전히 나오게 하기 위해서 블락해준다                                        */
+.footer_top .post_date{color: #363636; font-size: 12px; line-height: 20px; display: block;}
+.footer_top ul {margin-top: 20px;}
+.footer_top .footer_list li {border-bottom: 1px solid #252525; padding-bottom: 20px; margin-bottom: 20px;}
+.footer_top .footer_list li:last-child{border-bottom: 0;}
+.footer_top .footer_list li p{line-height: 20px; word-break: break-all;}
+
+.footer_top .footer_list li:hover .post_date{color: #fff;}
+.footer_top .footer_list li:hover p{color: #c7b299;}
+
+.twitter_id {color: #00bff3;}
+.footer_top  .dribble li{width:130px; ; float: left; margin:0 10px 10px 0 ; }
+.footer_top  .dribble li:nth-child(2n) {margin: 0 0 10px 0;}
+
+.footer_bottom {background: #111; padding: 42px 0 49px;}
+.footer_bottom p{line-height: 20px;}
+.footer_bottom .copy{ float: left;}
+.footer_bottom .designer{float: right;}
+.footer_bottom p a{color: #555; text-decoration: none;}
+.footer_bottom p a:hover {color: #c7b299;}
+.footer_bottom p span{color: #959595;}
+.footer_bottom p .devider{margin: 0 8px;}
+
+/* ResPonsive */
+/* ResPonsive */
+/* ResPonsive */
+
+/* pc구간에선 안보이게 */
+header .toggle{display: none;}
+
+
+@media screen and (max-width:768px) {
+  .container {width: 100%; padding: 0 15px; box-sizing: border-box;}
+  /* 위처럼 잡고 이제 깨지는거 수정 */
+
+  /* HEADER */
+  /* HEADER */
+  /* HEADER */
+  header {position: static; top: 0;background: #fff; padding: 20px 0 0; box-shadow: 0 3px 3px rgba(0,0,0,.3)}
+  /* 햄버거 버튼 만들기 */
+  header .toggle{display: block; float: left;line-height: 56px;
+  position: absolute; top: 20px; right: 10px; }
+  /* 로고 색바꾸기 */
+  header .logo a{background-image: url(../images/logo_dark.png)}
+  /* 장바구니 아이콘만 남기고 옆에 햄버거 버튼 위치하기 */
+  .top-icons li:last-child{display: none;}
+  .top-icons li a {color: #555;}
+
+  /* .container .main-menu {display: inline-block;} */
+  header nav{float: none; background: #111; padding: 0 15px;}
+  header .logo{float: none; padding-bottom: 20px; margin-left: 15px;}
+  header .container{padding: 0;}
+  header nav ul{float: none;}
+  .main-menu li{float: none; border-bottom:1px solid #252525;}
+              /* 바디가 기준이됨 */
+  .top-icons{position: absolute; top: 20px; right: 30px;}
+  .main-menu{display: none; }
+
+  /* Main content */
+  /* Main content */
+  /* Main content */
+
+  /* 전체 너비에서 하나의 간격이 차지하는 비중 계산  270/1170 = 23% *4 = 92px; 92 / */
+  .service_item { width: 23%; margin-right: 4%;}
+
+
+
+@media screen and (max-width:480px) {
+
+
+}

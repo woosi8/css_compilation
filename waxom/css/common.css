@@ -1,0 +1,108 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* reset+common */
+/* reset+common */
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+/* 이미지를 쓰면 밑에 여백이 나오니깐 top 써서 공백 안나오게하기 */
+img{vertical-align: top;}
+
+
+ /* TYPOGRAPHY */
+*{
+  /* 픽셜이 계단 형식으로 나와 깨져보이는거  스무스하게 나오게하는  효과 */
+  -webkit-font-smoothing: antialiased;
+}
+body{
+    /* 공통으로 작게 많이 쓰는 폰트 확인하여 주기 */
+    /* 크기 하이트     폰트      이도저도 없으면 */
+  font:16px/28px "Montserrat", sans-serif;
+}
+ h1,h2,h3,h4,h5,h6{
+	 font-family: "Raleway", sans-serif;
+ }
+
+
+ /* LAYOUT */
+ .container{
+   width: 1170px;
+   margin: 0 auto;
+
+ }
+ /* COMMON ELEMONTS */
+ .primary_color{
+
+ }
+ .btn{
+  background: #998675;
+  padding: 0 29px;
+  line-height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 3px;
+  clear: #fff;
+  text-decoration: none;
+  /* 그림자 주기 */
+  position: relative;
+  /* 포샵에서 확인 그림자inner shadow 값이 -90도 distance 3px */
+           /* 안쪽  x축  y축(-로 위로 올라오게) */
+  box-shadow: inset 0 -3px #736357;
+ }
+
+/* Realization 공통 사항(폰트종류,색,사이즈,너비) */
+.content_tt{font-size: 30px; color: #555555; font-weight: 600; text-align: center;}
+																																	/* 760(현재)/1170(전체) */
+.content_desc{font-size: 16px; color: #8c8c8c; font-weight: 300; width: 65%;
+	margin: 23px auto 33px; text-align: center;}
