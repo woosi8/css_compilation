@@ -6,6 +6,9 @@
 } */
 
 /* typography */
+body {
+    box-sizing: border-box;
+}
 h1 {
     font-size: 20px;
     margin: 0;
@@ -22,20 +25,23 @@ h1 {
 }
 
 .band {
+    padding: 20px 0;
+
     width: 90%;
     /* 1240보다 적어지면 적어진 너비의 90%를 쓴다 */
     max-width: 1240px;
     /* 1240을 유지한다는 말
     max는 변동값 mix 고정값*/
-
+    /* margin: 20px auto 0; */
     margin: 0 auto;
+    /* height: 100vh; */
     display: grid;
     grid-template-columns: 1fr;
     /*  500이상,850이상이 아닌 구간은 여기 , 즉 500이하 즉 모바일이됨*/
     grid-template-rows: auto;
     /* 높이는 니가 알아서해 */
     grid-gap: 20px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 /* 플랙스로 세분화하기 */
