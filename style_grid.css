@@ -70,8 +70,7 @@ h1 {
 
 .card:hover {
     /* 카드에 마우스가 올라올때 효과 */
-    /* top: -2px; */
-    z-index: 1;
+    top: -2px;
     box-sizing: 0 4px 5px rgba(0, 0, 0, 2);
 }
 
