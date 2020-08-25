@@ -362,7 +362,7 @@ a[class^='slide']:hover:before {
 /* 다른사항 각 각써주기 */
 .illustration_01 {
     background-color: #00c17b;
-    background-image: url(imgs/minipadwhite.png);
+    background-image: url(../imgs/minipadwhite.png);
     /* background-position: left center; */
     /* 왼쪽부터 0% */
     background-position: 0 50%;
@@ -378,7 +378,7 @@ a[class^='slide']:hover:before {
 }
 .illustration_02 {
     background-color: #e8697b;
-    background-image: url(imgs/minipadblack.png);
+    background-image: url(../imgs/minipadblack.png);
     /* background-position: right center; */
     background-position: 100% 50%;
 }
@@ -489,7 +489,7 @@ a[class^='slide']:hover:before {
     }
 }
 
-/* Button Animation */
+/* Button transformation */
 .buttons {
     text-align: center;
     /* margin-bottom: 30px; */
@@ -509,6 +509,7 @@ button {
 
 button:hover {
     color: #3498db;
+    cursor: pointer;
 }
 
 button::before {
@@ -700,6 +701,10 @@ button[class^='slide']:hover:before {
 
 input {
     display: none;
+}
+
+label:hover {
+    cursor: pointer;
 }
 
 /* ~형제 클래스 튜브전부 */
