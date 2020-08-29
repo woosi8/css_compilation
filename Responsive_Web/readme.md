@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I made clone Responsive website by vanilla js,Jquery
+Make clone Responsive website by vanilla js,Jquery
 This is reponsive for Mobile,Laptop,Tablet
 
 ## What kind of skills

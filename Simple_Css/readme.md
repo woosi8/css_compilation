@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I made simple css compilations.
+Make simple css compilations.
 
 ## What kind of skills
 
