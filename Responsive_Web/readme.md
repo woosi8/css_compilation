@@ -5,7 +5,7 @@
 I made clone Responsive website by vanilla js,Jquery
 This is reponsive for Mobile,Laptop,Tablet
 
-## Using Skills
+## What kind of skills
 
 ### Navbar in default.js
 
