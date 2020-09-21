@@ -7,13 +7,13 @@ Set display:grid in parent class(band)
 Set display:flex in children class(card)
 Grid is a easy way to set for responsible web
 
-## What kind of skills
+## 🔭What kind of skills
 
-### Grid
+### - Grid
 
 Put grid-template-coulmns and rows
 Put gird-template value that what you want to expect in media query
 
-### Flex
+### - Flex
 
 Put flex value and flex-direction column
